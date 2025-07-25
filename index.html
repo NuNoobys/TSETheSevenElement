@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+       body {
+         background-color: rgb(158, 50, 83);
+         height: 120vh;
+       }
+    </style>
+</head>
+
+<body>  
+    <div class ="box">
+       
+    </div>
+    <button class="clickHere" id="toggleBtn">
+        Click
+    </button>
+    <div class="ShowFrame" id="showFrame">
+    </div>
+
+    <script>
+    
+    let count = 0;
+    document.getElementById("toggleBtn").onclick = function() {
+        
+        const frame = document.getElementById("showFrame");
+        const isOpen = frame.classList.contains("show");
+        if (isOpen) {
+            if (count == 0){
+                frame.classList.toggle("close");
+            }
+        } else {
+            if (count == 0) {
+                count ++;
+                frame.classList.toggle("show");
+            }
+        }
+    };
+    </script>
+</body>
+</html>

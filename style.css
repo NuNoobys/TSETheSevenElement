@@ -1,0 +1,66 @@
+.box {
+    width: 197vh;
+    height: 100vh;
+    background-image: url(ImageFolder/backgroundWebTest.png);
+    background-size: cover;
+    margin: 10px;
+    display: flex;
+}
+
+.clickHere {
+    width: 100px;
+    height: 50px;;
+    background-color: #4CAF50;
+    box-shadow: none;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    font-size: 20px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform .5s;
+}
+
+.clickHere.active
+{
+    background-color: #bcc90e;
+    transform: scaleX(1.1) scaleY(1.1);
+}
+
+.ShowFrame
+{
+    width: 100px;
+    height: 100px;
+    background-color: #cf33c7;
+    border-radius: 15px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    display: flex;
+    opacity: 0;
+    transition: none;
+}
+
+.ShowFrame.show {
+    opacity: 1;
+    width: 650px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    pointer-events: auto;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 1s;
+}
+
+.ShowFrame.close {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+    transition: transform 1s, opacity 1s;
+}
